@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:orientation="vertical"
+    android:paddingHorizontal="25dp"
+    android:paddingTop="30dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="#777777"
+            android:text="Selamat Malam, "/>
+        <TextView
+            android:id="@+id/txtUserNameHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nama"
+            android:textColor="#777777"
+            android:fontFamily="@font/poppins"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/logo_bni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bni_logo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Saldo"
+        android:textSize="18dp"
+        android:textColor="@color/hex252525"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#000000">
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:background="#E16417"/>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="24dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="16dp"
+        android:backgroundTint="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="15dp">
+
+            <!-- Account Info Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Muhammad Faiz Ramdhan"
+                        android:textSize="16sp"
+                        android:textColor="@color/hex252525"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tv_account_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BNI Taplus Muda | 7263-2938-2390-****"
+                            android:textSize="12sp"
+                            android:textColor="@color/hex252525"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_arrow"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/copy"
+                    android:contentDescription="Copy Icon"/>
+            </LinearLayout>
+
+            <!-- Balance Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Rp"
+                    android:textColor="@color/hex252525"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="********"
+                    android:textSize="24sp"
+                    android:textColor="@color/hex252525"
+                    android:fontFamily="@font/poppins_bold"/>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_eye"
+                    android:contentDescription="Hide Balance Icon" />
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btn_withdraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tarik Tunai"
+                    android:backgroundTint="#E16417"
+                    android:textColor="#FFFFFF"/>
+
+                <Button
+                    android:id="@+id/btn_deposit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="20dp"
+                    android:text="Setor Tunai"
+                    android:backgroundTint="#E16417"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shortcut Kamu"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/hex252525"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_background"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins"
+            android:text="Transfer Uang"
+            android:drawableLeft="@drawable/ic_uang"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/poppins"
+            android:textAllCaps="false"
+            android:text="Virtual Account"
+            android:drawableLeft="@drawable/ic_va"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="1dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_background"
+            android:textAllCaps="false"
+            android:text="Pulsa / Data"
+            android:drawableLeft="@drawable/ic_pulsa"
+            android:drawablePadding="-5dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="1dp"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins"
+            android:layout_weight="1"
+            android:elevation="5dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_background"
+            android:textAllCaps="false"
+            android:text="Menu Lengkap"
+            android:drawableLeft="@drawable/ic_menu"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="1dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insight BNI"
+        android:textSize="18dp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/hex252525"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="6dp"/>
+
+    <HorizontalScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="142dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/gambar_1">
+            </ImageView>
+
+            <ImageView
+                android:layout_width="142dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/gambar_2">
+            </ImageView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/gambar_3">
+            </ImageView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>
